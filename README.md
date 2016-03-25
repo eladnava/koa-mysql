@@ -10,7 +10,7 @@ A Node.js [Koa](https://github.com/koajs/koa) wrapper for [felixge/node-mysql](h
 
 First, install the package using npm:
 ```shell
-npm install koa-mysql
+npm install koa-mysql --save
 ```
 
 Then, execute a query within a Koa middleware function using the following code:
