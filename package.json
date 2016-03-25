@@ -1,6 +1,6 @@
 {
   "name": "koa-mysql",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Koa wrapper for felixge/node-mysql.",
   "main": "wrapper.js",
   "scripts": {
