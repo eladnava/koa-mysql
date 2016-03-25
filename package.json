@@ -1,0 +1,23 @@
+{
+  "name": "koa-mysql",
+  "version": "1.0.0",
+  "description": "A Koa wrapper for felixge/node-mysql.",
+  "main": "wrapper.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eladnava/koa-mysql.git"
+  },
+  "author": "Elad Nava",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/eladnava/koa-mysql/issues"
+  },
+  "homepage": "https://github.com/eladnava/koa-mysql#readme",
+  "dependencies": {
+    "koa": "^1.2.0",
+    "mysql": "^2.10.2"
+  }
+}
