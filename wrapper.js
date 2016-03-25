@@ -9,14 +9,14 @@ function wrapQueryMethod(fn, ctx) {
         // Return a thunkified function that receives a done callback
         return function(done) {
             // Add a custom callback to provided args
-            args.push(function(err, rows, fields) {
+            args.push(function(err, result) {
                 // Query failed?
                 if (err) {
                     return done(err);
                 }
 
                 // Query succeeded
-                done(null, { rows: rows, fields: fields });
+                done(null, result);
             });
 
             // Execute the query

@@ -23,10 +23,10 @@ var db = mysql.createPool({ user: 'root', password: '', database: 'test', host: 
 
 // app.use(function* () {
     // Execute a sample query (with params)
-    var query = yield db.query("select ? + ? as test", [1, 2]);
+    var rows = yield db.query("select ? + ? as test", [1, 2]);
 
     // Output test result (3)
-    this.body = { test: query.rows[0].test };
+    this.body = { test: rows[0].test };
 // }
 ```
 
@@ -50,10 +50,10 @@ var app = koa();
 app.use(function* () {
     try {
         // Execute a sample query (with params)
-        var query = yield db.query("select ? + ? as test", [1, 2]);
+        var rows = yield db.query("select ? + ? as test", [1, 2]);
 
         // Output test result (3)
-        this.body = { test: query.rows[0].test };
+        this.body = { test: rows[0].test };
     }
     catch (err) {
         // 500 Internal Server Error
