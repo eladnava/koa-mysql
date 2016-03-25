@@ -30,7 +30,7 @@ var db = mysql.createPool({ user: 'root', password: '', database: 'test', host: 
 // }
 ```
 
-Go to http://localhost:3000/ to test it out. The result should be `{ test: 3 }`.
+Go to [http://localhost:3000/](http://localhost:3000/) to test it out. The result should be `{ test: 3 }`.
 
 ## Koa Example
 
