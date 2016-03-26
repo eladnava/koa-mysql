@@ -21,8 +21,6 @@ var mysql = require('koa-mysql');
 // Create a MySQL connection pool (do this once)
 var db = mysql.createPool({ user: 'root', password: '', database: 'test', host: 'localhost' });
 
-/* PASTE THE FOLLOWING WITHIN A GENERATOR */
-
 // Execute a sample query (with params)
 var rows = yield db.query("select ? + ? as test", [1, 2]);
 
@@ -70,7 +68,7 @@ app.listen(port);
 console.log('Server listening on port ' + port);
 ```
 
-Go to [http://localhost:3000/](http://localhost:3000/) to test it out. The result should be `{ test: 3 }`.
+Run the script and visit [http://localhost:3000/](http://localhost:3000/) to test it out. The server should return `{ test: 3 }`.
 
 ## License
 Apache 2.0
