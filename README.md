@@ -21,16 +21,12 @@ var mysql = require('koa-mysql');
 // Create a MySQL connection pool (do this once)
 var db = mysql.createPool({ user: 'root', password: '', database: 'test', host: 'localhost' });
 
-// app.use(function* () {
-    // Execute a sample query (with params)
-    var rows = yield db.query("select ? + ? as test", [1, 2]);
+// Execute a sample query (with params)
+var rows = yield db.query("select ? + ? as test", [1, 2]);
 
-    // Output test result (3)
-    this.body = { test: rows[0].test };
-// }
+// Output test result (3)
+this.body = { test: rows[0].test };
 ```
-
-Go to [http://localhost:3000/](http://localhost:3000/) to test it out. The result should be `{ test: 3 }`.
 
 ## Koa Example
 
@@ -71,6 +67,8 @@ app.listen(port);
 // Log port
 console.log('Server listening on port ' + port);
 ```
+
+Run the script and visit [http://localhost:3000/](http://localhost:3000/) to test it out. The server should return `{ test: 3 }`.
 
 ## License
 Apache 2.0
